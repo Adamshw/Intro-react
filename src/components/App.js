@@ -1,11 +1,16 @@
 import React from 'react';
-import CountButton from './CountButton'
+
+// to render components
+import CountButton from './CountButton/CountButton'
+import SearchBar from './SearchBar/SearchBar'
 
 const App = () => {
   
   return (
       <div>
-        <CountButton/>
+        <CountButton incrementBy={1} buttonColor={"blue"}/>
+        <CountButton incrementBy={20} buttonColor={"green"}/>
+        <SearchBar />
       </div>
   )
 }
