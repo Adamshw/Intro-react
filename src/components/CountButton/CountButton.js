@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import "./CountButton.css";
 // Component
 const CountButton = (props) =>{
+
+  // peice of state
   const [currentCount, setCurrentCount] = useState(0);
   
   const handleClick = () => {
@@ -12,6 +14,15 @@ const CountButton = (props) =>{
     background : props.buttonColor,
     
   }
+  // useEffect:
+  //1. the arrow function is called when the component mounts
+  //2. we pass methods we want to be called to the array (Dependency array)
+  useEffect( () =>{
+    if(currentCount === 10){
+      console.log("Hello from the other side")
+    }
+
+  }, [currentCount] )
 
 return(
   <div>
